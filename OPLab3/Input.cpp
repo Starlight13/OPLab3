@@ -13,11 +13,14 @@ char *parseStr(int len, char **str) {
     int count = 0;
     
     for (int i = 1; i < len; i++) {
-        if (str[i][0] >= '0' && str[i][0] <= '9') {
-            m[count++] = str[i][0];
-        } else if (str[i][0] == '+' || str[i][0] == '-' || str[i][0] == '(' || str[i][0] == ')' || str[i][0] == '*' || str[i][0] == '/' || str[i][0] == '^') {
-            m[count++] = str[i][0];
-        } else m[count++] = str[i][0];
+        for (int o = 0; o < length(str[i]); o++) {
+            if (str[i][o] >= '0' && str[i][o] <= '9') {
+                m[count++] = str[i][o];
+            } else if (str[i][o] == '+' || str[i][o] == '-' || str[i][o] == '(' || str[i][o] == ')' || str[i][o] == '*' || str[i][o] == '/' || str[i][o] == '^') {
+                m[count++] = str[i][o];
+                
+            }
+        }
     }
     
     
