@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		79A9DBAE2240F96000794E22 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79A9DBAD2240F96000794E22 /* main.cpp */; };
+		79A9DBB62240FA2B00794E22 /* Func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79A9DBB52240FA2B00794E22 /* Func.cpp */; };
+		79A9DBB82240FA3700794E22 /* FIle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79A9DBB72240FA3700794E22 /* FIle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		79A9DBAA2240F96000794E22 /* OPLab3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OPLab3; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9DBAD2240F96000794E22 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		79A9DBB42240FA1600794E22 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		79A9DBB52240FA2B00794E22 /* Func.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Func.cpp; sourceTree = "<group>"; };
+		79A9DBB72240FA3700794E22 /* FIle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FIle.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				79A9DBAD2240F96000794E22 /* main.cpp */,
+				79A9DBB42240FA1600794E22 /* Header.h */,
+				79A9DBB52240FA2B00794E22 /* Func.cpp */,
+				79A9DBB72240FA3700794E22 /* FIle.cpp */,
 			);
 			path = OPLab3;
 			sourceTree = "<group>";
@@ -118,7 +126,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A9DBB82240FA3700794E22 /* FIle.cpp in Sources */,
 				79A9DBAE2240F96000794E22 /* main.cpp in Sources */,
+				79A9DBB62240FA2B00794E22 /* Func.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
