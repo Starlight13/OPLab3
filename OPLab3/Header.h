@@ -8,7 +8,11 @@
 
 #ifndef Header_h
 #define Header_h
+#include <string>
+#include <iostream>
 #include <stdio.h>
+using namespace std;
+
 class stack {
     int length = 0;
     int maxLength;
@@ -60,10 +64,6 @@ struct queue {
     }
 };
 void postfix(char *array, int len, queue &q, stack &op);
-
-#include <string>
-#include <iostream>
-using namespace std;
 
 char *parseStr(int len, char **str);
 int length(char *array);
