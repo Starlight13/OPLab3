@@ -9,5 +9,11 @@
 #ifndef Header_h
 #define Header_h
 
+#include <string>
+#include <iostream>
+using namespace std;
+
+char *parseStr(int len, char **str);
+int length(char *array);
 
 #endif /* Header_h */

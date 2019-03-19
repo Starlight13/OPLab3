@@ -1,7 +1,12 @@
-#include <iostream>
+#include "Header.h"
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main(int argc, char **argv) {
+    char *array = parseStr(argc, argv);
+
+    for (int i = 0; i < length(array); i++) {
+        cout << array[i] << " ";
+    }
+    
     return 0;
 }
