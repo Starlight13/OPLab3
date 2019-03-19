@@ -13,12 +13,12 @@
 #include <stdio.h>
 using namespace std;
 
-class stack {
+class cstack {
     int length = 0;
     int maxLength;
     char * array;
 public:
-    stack(int maxLen = 0) {
+    cstack(int maxLen = 0) {
         maxLength = maxLen;
         array = new char[maxLength];
     }
@@ -29,7 +29,7 @@ public:
         char out;
         if (length > 0)
             out = array[length-1];
-            array[--length] = NULL;
+        array[--length] = NULL;
         return out;
     }
     
@@ -52,19 +52,47 @@ public:
     }
 };
 
-struct queue {
-    char *data;
-    int max_size, size;
-    int back, front;
-    queue(int N=100): max_size(N), size(0) {
-        data = new char[max_size];
-        for(int i = 0; i < max_size; i++)
-            data[i]=0;
-        back = front = max_size-1;
+class istack {
+    int length = 0;
+    int maxLength;
+    int * array;
+public:
+    istack(int maxLen = 0) {
+        maxLength = maxLen;
+        array = new int[maxLength];
+    }
+    void push(int value){
+        array[length++] = value;
+    }
+    int pop() {
+        int out;
+        if (length > 0)
+            out = array[length-1];
+        array[--length] = NULL;
+        return out;
+    }
+    
+    int top() {
+        return array[length - 1];
+    }
+    
+    int size() {
+        return length;
+    }
+    bool isEmpty() {
+        if(length > 0)
+            return false;
+        else
+            return true;
+    }
+    void clear() {
+        length = 0;
+        delete array;
     }
 };
-void postfix(char *array, int len, queue &q, stack &op);
-
+bool isOperator(char token);
+void postfix(char *array, int len, char* postArray, cstack &op);
+int calculate(char *postArray, int len, istack &num);
 char *parseStr(int len, char **str);
 int length(char *array);
 
