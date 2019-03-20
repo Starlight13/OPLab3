@@ -19,10 +19,22 @@ char *parseStr(int len, char **str) {
             } else if (str[i][o] == '+' || str[i][o] == '-' || str[i][o] == '(' || str[i][o] == ')' || str[i][o] == '*' || str[i][o] == '/' || str[i][o] == '^' || str[i][o] == 'v') {
                 m[count++] = str[i][o];
             } else if (str[i][o] == '!') {
-                
+                int facto = m[count - 1] - '0';
+                for (int u = 1; u <= facto; u++) {
+                    if (u == 1) {
+                        m[count - 1] = u + '0';
+                        m[count++] = '*';
+                    } else if (u == facto)
+                        m[count++] = u + '0';
+                    else {
+                        m[count++] = u + '0';
+                        m[count++] = '*';
+                    }
+                }
             }
         }
     }
+    m[count++] = '\0';
     
     
     return m;
