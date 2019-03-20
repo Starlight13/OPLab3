@@ -16,8 +16,9 @@ char *parseStr(int len, char **str) {
         for (int o = 0; o < length(str[i]); o++) {
             if (str[i][o] >= '0' && str[i][o] <= '9') {
                 m[count++] = str[i][o];
-            } else if (str[i][o] == '+' || str[i][o] == '-' || str[i][o] == '(' || str[i][o] == ')' || str[i][o] == '*' || str[i][o] == '/' || str[i][o] == '^') {
+            } else if (str[i][o] == '+' || str[i][o] == '-' || str[i][o] == '(' || str[i][o] == ')' || str[i][o] == '*' || str[i][o] == '/' || str[i][o] == '^' || str[i][o] == 'v') {
                 m[count++] = str[i][o];
+            } else if (str[i][o] == '!') {
                 
             }
         }
